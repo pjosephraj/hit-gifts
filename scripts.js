@@ -434,8 +434,7 @@ function postScore() {
       }
    };
    console.log(sendData);
-   alert('Thanks for played, This is a demo, will not post any Score!')
-   //window.location.replace('https://littleapp.in/pushData.html?d='+JSON.stringify(sendData));
+   alert('Thanks for played, This is a demo, will not post any Score!');
 }
 
 function restartGame(){window.location.reload();}
