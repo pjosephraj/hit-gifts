@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Hit Gifts - CreateJS Game</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script src="scripts.js"></script>
+  <style type="text/css">
+  #container {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 510px;
+    height: 800px;
+    background-color: #000;
+    overflow: hidden;
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+  }
+  #start {
+    width: 100%;
+  }
+  </style>
+</head>
+
+<body style="background-color:#000;margin:0px;">
+  <div id="container">
+    <canvas id="canvas" width="510" height="800" style="background-color:#dad0c4"></canvas>
+  </div>
+  <script type="text/javascript">
+    function handleResize(e) {
+      var scale = Math.min(this.innerWidth / 510, this.innerHeight / 800);
+      var cssText = '-webkit-transform: scale(' + scale + '); -ms-transform: scale(' + scale + ');';
+      cssText += 'transform: scale(' + scale + '); left: ' + (this.innerWidth / 2 - (510 * scale) / 2) + 'px';
+      document.getElementById('container').style.cssText = cssText;
+    }
+    window.onresize = handleResize;
+    handleResize();
+    init();
+  </script>
+</body>
+
+</html>
